@@ -57,7 +57,7 @@
   }
   
   .hero {
-	background-image: url("about_bg4.png"); 
+	background-image: url("./photos/about_bg4.png"); 
     background-size: cover;
     background-position: center;
 	opacity: 80%;

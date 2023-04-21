@@ -214,9 +214,10 @@
   }
 
   .back {
-    background-image: url("bg3.avif");
+    background-image: url("./photos/bg3.avif");
     background-size: cover;
     background-position: center 90px;
+    background-attachment: fixed;
   }
 
   @keyframes rotate {

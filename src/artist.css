@@ -225,9 +225,10 @@
   }
 
   .back {
-    background-image: url("artist.webp"); 
+    background-image: url("./photos/artist.webp"); 
     background-size: cover;
     background-position: center 90px;
+    background-attachment: fixed;
   }
 
   @keyframes rotate {
