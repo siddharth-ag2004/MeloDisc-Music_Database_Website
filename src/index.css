@@ -151,6 +151,29 @@
     font-weight: 400;
     text-align: center;
   }
+
+  .artist-item2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .artist-item2 img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .artist-item2 h3 {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+  }
   
   footer {
     background-color: #232121;
