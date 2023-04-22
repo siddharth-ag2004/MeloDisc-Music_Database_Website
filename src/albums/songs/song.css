@@ -196,10 +196,6 @@
     transition: color 0.3s ease;
   }
   
-  nav a:hover {
-    color: #ffd700;
-  }
-  
   nav h2{
     margin-top: 20px;
     margin-right: 20px;
