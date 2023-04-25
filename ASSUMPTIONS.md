@@ -7,3 +7,7 @@
 4.We have assumed that we have to search for top 10 results first(as mentioned in the pdf), and then filter them if and when the user applies the filters. So applying filters may display less than 10 songs.
 
 5.In some cases, like when the internet connection is slow, or when the search button is pressed continuosly, the webpage may display more than 10 songs. Pressing Search again or relaoding, should fix the problem and 10 results are displayed. 
+
+6.We have assumed the maximum playtime for a song to be 15 mins.
+
+7.For Artist Spotlight Page, in the review section, all fields need to be filled beofre submitting a review. Leaving any field empty will not allow the user to submit a review.
