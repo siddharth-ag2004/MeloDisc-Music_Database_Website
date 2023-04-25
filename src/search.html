@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+		<html lang="en">
+		<head>
+			<meta charset="UTF-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<title>MeloDisc</title>
+			<link rel="stylesheet" href="search.css" />
+			<link rel="icon" type="image/x-icon" href="./photos/disc.png" style="border-radius: 50%;">
+			<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+			rel="stylesheet"
+			/>
+		</head>
+		<body class="back">
+			<nav>
+			<div class="container">
+				<div class="logo">
+				<a href="#">MeloDisc</a>
+				</div>
+				<div class="nav-links">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Artists</a></li>
+					<li><a href="#">About</a></li>
+				</ul>
+				</div>
+			</div>
+			</nav>
+
+
+
+			<header style="display: flex; align-items: center;">
+				<img src="./photos/disc2.png" alt="MeloDisc" width="60" height="60" style="border-radius: 50%; display: inline-block; animation: rotate 5s infinite linear;margin-right: 10px;">
+				<h1 style="display: inline-block;font-family: 'Brush Script MT', cursive;">MeloDisc</h1>
+				<pre>                                                          </pre>                          
+				<div class="container">
+				<h1 style="text-align: center; display: inline-block;">Search</h1>
+				</div>
+				<div class="navigation">
+				<nav>
+					<h2 style="display: inline-block;"><a href="index.html">Home</a></h2>
+					<h2 style="display: inline-block;"><a href="artist.html">Artists</a></h2>
+					<h2 style="display: inline-block; background-color: rgb(119, 118, 105);"><a href="search.html">Search</a></h2>
+					<h2 style="display: inline-block;"><a href="artistspotlight.html">Artist Spotlight</a></h2>
+					<h2 style="display: inline-block; "><a href="about.html">About</a></h2>
+			  </nav>
+				</div>
+			</header>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+			<div class="search_bar">
+				<div >
+				<form>
+					<input id="search-input" type="text" placeholder="Search Song or Album Name" />
+					<button id="search-btn" type="submit">Search</button>
+				</form>
+				<br>
+				</div>	
+			</div>
+
+			<br>
+			<br>
+			
+			<div class="filter_box">
+				<div style="display:flex">
+					<label for="duration-filter">Max Duration (in minutes):</label>
+					<input id="duration-filter" type="number" min="1" max="15" step="1" value="15" />
+				</div>
+				<br>	
+				<div>
+					<label for="explicit-filter">Explicit:</label>
+					<select id="explicit-filter">
+					<option value="all">All</option>
+					<option value="explicit">Explicit</option>
+					<option value="cleaned">Non Explicit</option>
+					</select>
+				</div>
+				<br>				  
+				<div>		
+					<button id="filter-btn" type="button">Apply Filters<br>(To Top 10 Results)</button>
+					<button id="clear-btn" type="button">Clear Filters<br>(From Top 10 Results)</button>
+				</div>
+			</div>
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+			<div id="search-results"></div>
+			
+			
+		
+
+		<footer id="footer">
+		<div class="container">
+			<h4 style="margin-bottom: 4px;">Explore The World Of Music With Melodisc - Your Comprehensive Music Database</h4>
+			<h4 style="margin-bottom: 6px;"><a href="about.html">About Us</a></h4>
+			<h4>&copy; MeloDisc</h4>
+		</div>
+		
+	</footer>
+
+		<script src="search.js"></script>
+		<script src="./nav.js"></script>
+	</body>
+	</html>

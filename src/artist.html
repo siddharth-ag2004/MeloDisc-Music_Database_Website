@@ -54,10 +54,41 @@
 		<br>
 		<br>
 		<br>
-		<div align="middle"  style="font-size: 30px; color:aliceblue">
-			<h2>Discover New Music</h2>
-			<p>Find your next favorite artist on MeloDisc.</p>
-		</div>
+		<div align="middle" style="font-size: 30px; color: aliceblue;">
+			<h2 id="typing-effect-h2"></h2>
+			<p id="typing-effect-p"></p>
+		  </div>
+		  
+		  <script>
+			const h2Text = "Discover New Music";
+			const pText = "Find Your Next Favorite Artist On MeloDisc.";
+		  
+			const h2Element = document.getElementById("typing-effect-h2");
+			const pElement = document.getElementById("typing-effect-p");
+		  
+			let h2Index = 0;
+			let pIndex = 0;
+		  
+			function typeH2() {
+			  if (h2Index < h2Text.length) {
+				h2Element.textContent += h2Text.charAt(h2Index);
+				h2Index++;
+				setTimeout(typeH2, 40);
+			  } else {
+				setTimeout(typeP, 100);
+			  }
+			}
+		  
+			function typeP() {
+			  if (pIndex < pText.length) {
+				pElement.textContent += pText.charAt(pIndex);
+				pIndex++;
+				requestAnimationFrame(typeP);
+			  }
+			}
+		  
+			requestAnimationFrame(typeH2);
+		  </script>
 	
 		<div class="artists">
 		  <div class="container">
