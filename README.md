@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/uO3FBJhb)
 The website can be opened from any html page, however opening from index.html takes you to the Home Page.
 Each webpage always has the option to go to Home page, Artists Page and About Page by using the navigation bar.
 At the bottom of each webpage there is a footer containing link to About page.
