@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>MeloDisc</title>
-		<link rel="stylesheet" href="../song.css" />
+		<link rel="stylesheet" href="../static/song.css" />
     <link rel="icon" type="image/x-icon" href="../../../photos/disc.png" style="border-radius: 50%;">
 		<link
 		  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
@@ -73,105 +73,43 @@
         
         <main>
             <h2>Top Songs</h2>
-            <ul>
-              <li>
-                <h3>Lose Yourself</h3>
-                <p>5:20</p>
-              </li>
-              <li>
-                <h3>Without Me</h3>
-                <p>4:50</p>
-              </li>
-              <li>
-                <h3>Sing for the Moment</h3>
-                <p>5:39</p>
-              </li>
-              <li>
-                <h3>Cleaning Out My Closet</h3>
-                <p>4:58</p>
-              </li>
+            <ul id="my-list">
               <li>
                 <h3>White America</h3>
                 <p>5:24</p>
+                
+				<button id="0101" type="button" class="button">
+					<span class="button__text"><pre>  Add</pre></span>
+					<span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+				</button>
               </li>
               <li>
-                <h3>Business</h3>
-                <p>4:11</p>
+                <h3>Lose Yourself</h3>
+                <p>5:26</p>
+                <button id="0102" type="button" class="button">
+					<span class="button__text"><pre>  Add</pre></span>
+					<span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+				</button>
               </li>
               <li>
-                <h3>Cleanin' Out My Closet</h3>
-                <p>4:58</p>
-              </li>
-              <li>
-                <h3>Square Dance</h3>
-                <p>5:24</p>
-              </li>
-              <li>
-                <h3>The Kiss (Skit)</h3>
-                <p>1:16</p>
-              </li>
-              <li>
-                <h3>Soldier</h3>
-                <p>3:46</p>
-              </li>
-              <li>
-                <h3>Say Goodbye Hollywood</h3>
-                <p>4:32</p>
-              </li>
-              <li>
-                <h3>Drips (feat. Obie Trice)</h3>
-                <p>4:45</p>
-              </li>
-              <li>
-                <h3>Without Me</h3>
-                <p>4:50</p>
-              </li>
-              <li>
-                <h3>Paul Rosenberg (Skit)</h3>
-                <p>0:22</p>
-              </li>
-              <li>
-                <h3>Sing for the Moment</h3>
-                <p>5:39</p>
-              </li>
-              <li>
-                <h3>Superman (feat. Dina Rae)</h3>
-                <p>5:50</p>
-              </li>
-              <li>
-                <h3>Hailie's Song</h3>
-                <p>5:20</p>
-              </li>
-              <li>
-                <h3>Steve Berman (Skit)</h3>
-                <p>0:33</p>
-              </li>
-              <li>
-                <h3>When the Music Stops (feat. D12)</h3>
-                <p>4:29</p>
-              </li>
-              <li>
-                <h3>Say What You Say (feat. Dr. Dre)</h3>
-                <p>5:09</p>
-              </li>
-              <li>
-                <h3>'Till I Collapse (feat. Nate Dogg)</h3>
-                <p>4:58</p>
-              </li>
-              <li>
-                <h3>My Dad's Gone Crazy (feat. Hailie Jade)</h3>
-                <p>4:28</p>
+                <h3>Rap God</h3>
+                <p>6:03</p>
+                <button id="0103" type="button" class="button">
+					<span class="button__text"><pre>  Add</pre></span>
+					<span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+				</button>
               </li>
             </ul>
+            
           </main>
 
   <footer>
 	<div class="container">
 		<h4 style="margin-bottom: 4px;">Explore The World Of Music With Melodisc - Your Comprehensive Music Database</h4>
-		<h4 style="margin-bottom: 6px;"><a href="../../../about.html">About Us</a></h4>
+		<h4 style="margin-bottom: 6px;"><a href="./playlist.html">About Us</a></h4>
 		<h4>&copy; MeloDisc</h4>
 	</div>
 	</footer>
-	<script src="../../../nav.js"></script>
+	<script src="{{ url_for('static', filename='song_post.js') }}"></script>
 </body>
 </html>
