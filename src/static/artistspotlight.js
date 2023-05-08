@@ -34,7 +34,7 @@ function submitReview() {
   };
 
   reviews.push(reviewObject);
-
+  document.getElementById("review_form").reset();
   displayReviews();
 }
 

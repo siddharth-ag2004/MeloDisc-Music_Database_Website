@@ -1,12 +1,12 @@
+// get and display selected songs on playlist page
 const songList = document.getElementById('song-list');
 
 fetch('/playlist')
   .then(response => response.json())
   .then(data => {
-    // Iterate over the song data and create HTML elements to display it on the webpage
     data.songs.forEach(song => {
       const listItem = document.createElement('li');
-      listItem.dataset.songId = song.id; // Set the song id as a data attribute on the list item
+      listItem.dataset.songId = song.id;
       listItem.innerHTML = `
         <h3>${song.title}</h3>
         <p>${song.duration}</p>
@@ -20,22 +20,17 @@ fetch('/playlist')
     console.log('Error fetching song data:', error);
   });
 
-  
-  // Get the playlist element
+
+  // delete a song from playlist page
   const playlist = document.getElementById('song-list');
   
-  // Function to remove a song from the playlist
   function removeSong(event) {
-    // Get the list item that contains the button that was clicked
     const listItem = event.target.closest('li');
   
-    // Get the song id from the data attribute
     const songId = listItem.dataset.songId.toString();
   
-    // Remove the song from the playlist in the DOM
     playlist.removeChild(listItem);
   
-    // Send a DELETE request to the Flask server to remove the song from the database
     fetch(`/songs/${songId}`, {
       method: 'DELETE',
     })
@@ -51,11 +46,9 @@ fetch('/playlist')
     });
   }
   
-  // Add a click event listener to the playlist to handle removing songs
   playlist.addEventListener('click', function(event) {
     const clickedElement = event.target;
   
-    // Check if the clicked element or one of its ancestors with the .remove-button class is the button itself
     if (clickedElement.matches('.remove-button') || clickedElement.closest('.remove-button')) {
       removeSong(event);
     }

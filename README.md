@@ -1,17 +1,26 @@
-The website can be opened from any html page, however opening from index.html takes you to the Home Page.
-Each webpage always has the option to go to Home page, Artists Page, About Page, Search Page and Artist Spotlight Page by using the navigation bar.
+The website should be opened from app.py which takes you to the Home Page. app.py should be first given execute permission and can be run from terminal by the command ./app.py.
+
+Each webpage always has the option to go to Home page, Artists Page, Playlist Page, About Page, Search Page and Artist Spotlight Page by using the navigation bar.
 At the bottom of each webpage there is a footer containing link to About page.
 Apart from that, some webpages might have even more clickable images and links that may direct the user to the different webpages. These webpages include:
-1.Home page: This page contains 6 more clickable images, 3 of which lead to the respective album page for the top artist clicked. Other 3 images direct the user to the respective songs page for the album whose image has been clicked.
-2.Artists page: This page contains 5 more clickable images. When pressed, website directs the user to the album page of the respective artist whose image has been clicked.
-3.Albums page: This page contains 5 more clickable images. When pressed, the website directs the user to the songs page for the album whose image has been pressed.
+
+Home page: This page contains 6 more clickable images, 3 of which lead to the respective album page for the top artist clicked. Other 3 images direct the user to the respective songs page for the album whose image has been clicked.
+
+Artists page: This page contains 5 more clickable images. When pressed, website directs the user to the album page of the respective artist whose image has been clicked.
+
+Albums page: This page contains 5 more clickable images. When pressed, the website directs the user to the songs page for the album whose image has been pressed.
+
+In the Songs Page, each song of an album has the option to be added to the playlist.This can be done by clicking the Add button next to each song.
+
+The Playlist Page contains list of songs added by the user, and each song has the option to be removed from the playlist. This can be done by clicking on the remove button.
 
 To search for a song in the Search Page with filters, filters will be applied only after clicking the apply filter button and then, pressing the search button should filter the songs from the top 10 results of the song name and display them. 
 
+The Artist Spotlight Page contains a review button which can be pressed once the required fields have been filled(name,rating,review).
 
-The Songs pages and About Us page have no extra clickable images or links.
+The About Us  has no extra clickable images or links.
 
-The website further informs the user on which page they currently are, with the help of the navigation bar, which may highlight either Home, Artists or About Us.
+The website further informs the user on which page they currently are, with the help of the navigation bar, which may highlight either Home, Artists, Search, Playlist, Artist Spotlight or About Us.
 If the user is currently on a songs page or albums page, no highlighting is present.
 
 
@@ -22,61 +31,19 @@ The file structure is as follows:
 ├── ASSUMPTIONS.md
 ├── README.md
 └── src
-    ├── about.css
-    ├── about.html
-    ├── albums
-    │   ├── album_01.html
-    │   ├── album_02.html
-    │   ├── album_03.html
-    │   ├── album_04.html
-    │   ├── album_05.html
-    │   ├── album.css
-    │   └── songs
-    │       ├── song01
-    │       │   ├── song_01_01.html
-    │       │   ├── song_01_02.html
-    │       │   ├── song_01_03.html
-    │       │   ├── song_01_04.html
-    │       │   └── song_01_05.html
-    │       ├── song02
-    │       │   ├── song_02_01.html
-    │       │   ├── song_02_02.html
-    │       │   ├── song_02_03.html
-    │       │   ├── song_02_04.html
-    │       │   └── song_02_05.html
-    │       ├── song03
-    │       │   ├── song_03_01.html
-    │       │   ├── song_03_02.html
-    │       │   ├── song_03_03.html
-    │       │   ├── song_03_04.html
-    │       │   └── song_03_05.html
-    │       ├── song04
-    │       │   ├── song_04_01.html
-    │       │   ├── song_04_02.html
-    │       │   ├── song_04_03.html
-    │       │   ├── song_04_04.html
-    │       │   └── song_04_05.html
-    │       ├── song05
-    │       │   ├── song_05_01.html
-    │       │   ├── song_05_02.html
-    │       │   ├── song_05_03.html
-    │       │   ├── song_05_04.html
-    │       │   └── song_05_05.html
-    │       └── song.css
-    ├── artist.css
-    ├── artist.html
-    ├── artistspotlight.css
-    ├── artistspotlight.html
-    ├── artistspotlight.js
-    ├── index.css
-    ├── index.html
-    ├── nav.js
-    ├── photos
+    ├── app.py
+    ├── playlist.db
+    ├── static
     │   ├── about_bg1.png
     │   ├── about_bg2.png
     │   ├── about_bg3.png
     │   ├── about_bg4.png
+    │   ├── about.css
     │   ├── ajbg.jpg
+    │   ├── album.css
+    │   ├── artist.css
+    │   ├── artistspotlight.css
+    │   ├── artistspotlight.js
     │   ├── artist.webp
     │   ├── asbg2.jpg
     │   ├── bg1.avif
@@ -124,6 +91,7 @@ The file structure is as follows:
     │   ├── em.webp
     │   ├── encoreblur.png
     │   ├── encore.png
+    │   ├── index.css
     │   ├── kamblur.png
     │   ├── kamikaze.png
     │   ├── logo3.jpg
@@ -146,6 +114,7 @@ The file structure is as follows:
     │   ├── mmlp.png
     │   ├── mtbmbblur.png
     │   ├── mtbmb.png
+    │   ├── nav.js
     │   ├── nu1.jpg
     │   ├── nu_album1blur.jpg
     │   ├── nu_album1.jpg
@@ -168,11 +137,19 @@ The file structure is as follows:
     │   ├── pic2.jpg
     │   ├── pic3.webp
     │   ├── pic4.png
+    │   ├── playlist_bg1.webp
+    │   ├── playlist.css
+    │   ├── playlist_get_delete.js
+    │   ├── playlist.webp
     │   ├── pro1.jpeg
     │   ├── searchbg5.jpg
+    │   ├── search.css
+    │   ├── search.js
     │   ├── sid1.png
     │   ├── songbackground1.jpg
     │   ├── songbackground2.jpg
+    │   ├── song.css
+    │   ├── song_post.js
     │   ├── sujal2.jpg
     │   ├── sujal.jpg
     │   ├── sujal.png
@@ -220,8 +197,43 @@ The file structure is as follows:
     │   ├── yy_bg4.png
     │   ├── yy_tp1.jpg
     │   └── yy_tp2.jpg
-    ├── search.css
-    ├── search.html
-    └── search.js
+    └── templates
+        ├── about.html
+        ├── album_01.html
+        ├── album_02.html
+        ├── album_03.html
+        ├── album_04.html
+        ├── album_05.html
+        ├── artist.html
+        ├── artistspotlight.html
+        ├── index.html
+        ├── playlist.html
+        ├── search.html
+        ├── song_01_01.html
+        ├── song_01_02.html
+        ├── song_01_03.html
+        ├── song_01_04.html
+        ├── song_01_05.html
+        ├── song_02_01.html
+        ├── song_02_02.html
+        ├── song_02_03.html
+        ├── song_02_04.html
+        ├── song_02_05.html
+        ├── song_03_01.html
+        ├── song_03_02.html
+        ├── song_03_03.html
+        ├── song_03_04.html
+        ├── song_03_05.html
+        ├── song_04_01.html
+        ├── song_04_02.html
+        ├── song_04_03.html
+        ├── song_04_04.html
+        ├── song_04_05.html
+        ├── song_05_01.html
+        ├── song_05_02.html
+        ├── song_05_03.html
+        ├── song_05_04.html
+        └── song_05_05.html
+
 
 ```
